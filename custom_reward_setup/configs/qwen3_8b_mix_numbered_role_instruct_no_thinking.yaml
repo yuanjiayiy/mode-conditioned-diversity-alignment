@@ -1,0 +1,16 @@
+custom_reward_function:
+	reward_kwargs:
+		compute_reward: compute_reward_relu
+		text_weight: 1.0
+		distinctiveness_weight: 100.0
+		length_penalty_max_tokens: 512
+
+algorithm:
+	use_personality_diversity: true
+	personality_domain: crafted_personas
+
+data:
+	train_files: ${env:HOME}/data/tulu3_infinite-chats-taxonomy_mix_10k_no_thinking/train.parquet
+	val_files: ${env:HOME}/data/tulu3_infinite-chats-taxonomy_mix_10k_no_thinking/validation.parquet
+  apply_chat_template_kwargs:
+    enable_thinking: false

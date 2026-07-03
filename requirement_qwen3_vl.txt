@@ -1,0 +1,11 @@
+transformers>=4.57.6
+omegaconf
+hydra-core
+codetiming
+numpy
+ray
+tensordict
+wandb
+datasets
+sentence_transformers
+qwen_vl_utils
